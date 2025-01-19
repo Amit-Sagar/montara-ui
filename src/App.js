@@ -1,10 +1,14 @@
 import Layout from "./Components/Layout";
+ import Modal from "./Components/Modal";
+import MidContainer from "./Components/MidContainer";
 
 function App() {
   return (
     <Layout>
-      <p> Hello</p>
+      <MidContainer/>
+      <Modal/>
     </Layout>
+    
   );
 }
 

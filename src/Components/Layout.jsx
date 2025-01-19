@@ -8,7 +8,7 @@ import RightSection from "./RightSection";
 const Layout = ({ children, setOpenModal }) => {
   return (
     <div>
-      <div className="flex justify-between  items-center py-4 border-b-2 border-[#EFEFEF] px-5">
+      <div className="flex justify-between  items-center py-3 border-b-2 border-[#EFEFEF] px-5">
         <Button
           color="gray"
           variant="surface"
@@ -21,7 +21,7 @@ const Layout = ({ children, setOpenModal }) => {
         </Button>
         <div className="flex justify-center items-center gap-2">
           <img src={headerIcon} alt="" />
-          <p className="text-lg leading-4 font-semibold">Starter Project</p>
+          <p className="text-lg leading-4 font-medium">Starter Project</p>
         </div>
         <div className="flex gap-3">
           <button className="border border-[#EFEFEF] w-8 h-8 flex items-center px-1 py-0">
