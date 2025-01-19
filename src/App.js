@@ -1,14 +1,16 @@
 import Layout from "./Components/Layout";
- import Modal from "./Components/Modal";
+import Modal from "./Components/Modal";
 import MidContainer from "./Components/MidContainer";
+import { useState } from "react";
 
 function App() {
+  const [openModal, setOpenModal] = useState(false);
   return (
-    <Layout>
-      <MidContainer/>
-      <Modal/>
+    <Layout setOpenModal={setOpenModal}>
+      <MidContainer />
+      {openModal && <Modal setOpenModal={setOpenModal} />}
     </Layout>
-    
+
   );
 }
 

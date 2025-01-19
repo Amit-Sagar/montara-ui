@@ -25,7 +25,7 @@ const RightSection = ({ setOpenModal }) => {
     return;
   };
   return (
-    <div className="w-20 flex flex-col border-l-2 border-[#EFEFEF] bg-[#EFEFEF]">
+    <div className="min-w-14 flex flex-col border-l-2 border-[#EFEFEF] bg-[#FAFAFA]">
       {assets.map((asset) => (
         <img
           key={Math.random() + "ABC"}

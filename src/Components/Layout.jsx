@@ -1,7 +1,7 @@
 import { Button } from "@radix-ui/themes";
 import React from "react";
 import backIcon from "../assets/icons/backIcon.svg";
-import headerIcon from "../assets/icons/headerIcon.png";
+import headerIcon from "../assets/icons/headerIcon.svg";
 import Sidebar from "./Sidebar";
 import RightSection from "./RightSection";
 
@@ -23,7 +23,7 @@ const Layout = ({ children, setOpenModal }) => {
           <img src={headerIcon} alt="" />
           <p className="text-lg leading-4 font-medium">Starter Project</p>
         </div>
-        <div className="flex gap-3">
+        <div className="flex gap-3 items-center">
           <button className="border border-[#EFEFEF] w-8 h-8 flex items-center px-1 py-0">
             <div className="text-white rounded-md bg-[#21CCEE] font-bold w-full ">
               C
@@ -31,7 +31,7 @@ const Layout = ({ children, setOpenModal }) => {
           </button>
           <Button
             color="#2160FD"
-            className="shadow-lg !font-semibold !leading-[14px] !px-2.5"
+            className="shadow-lg !font-semibold !leading-[14px] !px-2.5 !h-7"
           >
             Export
           </Button>
