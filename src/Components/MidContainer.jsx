@@ -21,45 +21,38 @@ export default function MidContainer() {
     {
       id: 1,
       name: "Orientation",
-      img: <img src={Horizontal} alt="" />,
+      img: <img src={Horizontal} className="w-3 h-3 lg:w-4 lg:h-4" alt="" />,
       options: ["Orientation", "val2"],
     },
     {
       id: 2,
       name: "Background",
-      img: <img src={StrikeThrough} alt="" />,
+      img: <img src={StrikeThrough} alt="" className="w-3 h-3 lg:w-4 lg:h-4" />,
       options: ["Background", "val2"],
     },
     {
       id: 3,
       name: "Opacity",
-      img: <img src={Rectangle} alt="" />,
+      img: <img src={Rectangle} alt="" className="w-3 h-3 lg:w-4 lg:h-4" />,
       options: ["Opacity", "val2"],
     },
     {
       id: 4,
       name: "Blur",
-      img: <img src={Vector} alt="" />,
+      img: <img src={Vector} alt="" className="w-3 h-3 lg:w-4 lg:h-4" />,
       options: ["Blur", "val2"],
     },
   ];
   const [selected, setSelected] = useState({});
   return (
     <div className="w-full">
-      <header className="flex justify-center items-center border-b-2 border-[#EFEFEF] py-1">
+      <header className="flex justify-center items-center border-b-2 border-[#EFEFEF] py-3 lg:py-1 ">
         {navItems.map((item) => (
           <div key={item.id}>
-            <div className="flex">
+            <div className="flex items-center">
               {item.img}{" "}
               <select
-                style={{
-                  padding: "5px",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  border: "none",
-                  marginRight: "15px",
-                  color: "#303030",
-                }}
+                className="p-1 text-xs lg:text-sm font-semibold border-none mr-[15px] text-[#303030]"
                 value={selected[item.name] || ""}
                 onChange={(e) =>
                   setSelected((prev) => ({
@@ -79,8 +72,12 @@ export default function MidContainer() {
         ))}
       </header>
       <div>
-        <img className="m-auto px-[82px]" src={Frame} alt="" />
-        <div className="flex justify-between py-[10px] border-t-2 border-[#EFEFEF]">
+        <img
+          className="m-auto h-[366px] lg:h-auto px-7 lg:px-[82px]"
+          src={Frame}
+          alt=""
+        />
+        <div className="flex justify-between py-3 lg:py-[10px] border-t-2 border-[#EFEFEF]">
           <h3 className="font-medium ml-[18px]">08:32</h3>
           <div className="flex">
             <img src={Backward} alt="" />
@@ -94,7 +91,7 @@ export default function MidContainer() {
         </div>
       </div>
       <footer>
-        <div className="flex justify-between pt-4 pb-4 bg-[#EFEFEF] text-[#707070] text-sm/[14px] px-[10px]">
+        <div className="flex justify-between pt-4 pb-4 bg-[#EFEFEF] text-[#707070] text-sm/[14px] px-[10px] overflow-auto">
           <p>00:00</p>
           <p>00:02</p>
           <p>00:04</p>
@@ -111,14 +108,16 @@ export default function MidContainer() {
           <p>00:20</p>
           <p>00:21</p>
         </div>
-        <div className="relative px-4">
+        <div className="relative px-4 overflow-auto">
           <img className="absolute left-20 -top-2 " src={Line} alt="" />
-          <img
-            className="my-3 w-full max-h-12 object-cover rounded-lg"
-            src={Timeline}
-            alt=""
-          />
-          <div className="bg-[#FAFAFA] w-full flex justify-center rounded-lg">
+          <div className="my-3 rounded-lg w-[900px] overflow-x-auto  lg:w-full max-h-12">
+            <img
+              className=" w-full h-full lg:object-cover"
+              src={Timeline}
+              alt=""
+            />
+          </div>
+          <div className="bg-[#FAFAFA] w-full flex justify-center rounded-lg overflow-x-auto">
             {/* <Button className="bg-[#a6f0fc] text-[#06AED4]"><img src={Zoom} alt=""/>Zoom 2s</Button> */}
             <Button
               className="!bg-[#a6f0fc] !flex !justify-start !items-center !gap-0.5 !px-0.5 !w-[183px] "
@@ -131,7 +130,9 @@ export default function MidContainer() {
               </div>
             </Button>
           </div>
-          <img className="my-3 w-full" src={Timeline1} alt="" />
+          <div className="rounded-lg w-[900px] overflow-x-auto lg:w-full">
+            <img className="my-3 w-full " src={Timeline1} alt="" />
+          </div>
         </div>
       </footer>
     </div>
